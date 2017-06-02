@@ -78,6 +78,8 @@ class ControllerExtensionDAjaxFilterCache extends Controller
         $data['text_form'] = $this->language->get('text_form');
         $data['text_installation_progress'] = $this->language->get('text_installation_progress');
 
+        $data['button_cancel'] = $this->language->get('button_cancel');
+
         // Variable
         $data['id'] = $this->codename;
         $data['route'] = $this->route;
