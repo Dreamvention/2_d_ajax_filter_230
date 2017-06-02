@@ -3,7 +3,7 @@
     "version": "2.0.0",
     "name": "Ajax Filter",
     "description": "Ajax Fitler",
-    "index": "module/d_ajax_filter",
+    "index": "extension/module/d_ajax_filter",
     "author": {
         "name": "Dreamvention",
         "email": "info@dreamvention.com",
