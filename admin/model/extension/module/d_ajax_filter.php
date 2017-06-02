@@ -21,6 +21,8 @@ class ModelExtensionModuleDAjaxFilter extends Model {
 
     public function DropDatabase(){
         $this->db->query("DROP TABLE IF EXISTS ". DB_PREFIX . "af_translit");
+        $this->load->model('extension/'.$this->codename.'/cache');
+        $this->{'model_extension_'.$this->codename.'_cache'}->disableCache();
     }
     
     public function checkCache(){

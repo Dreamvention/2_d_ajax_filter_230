@@ -92,6 +92,14 @@ class ControllerExtensionDAjaxFilterCache extends Controller
 
         $data['create_complete'] =  str_replace('&amp;', '&', $this->url->link('extension/module/'.$this->codename, 'token='.$this->session->data['token'], 'SSL'));
 
+        if(VERSION>='2.3.0.0'){
+            $data['cancel'] = $this->url->link('extension/extension', 'token='.$this->session->data['token'].'&type=module', 'SSL');
+        }
+        else
+        {
+            $data['cancel'] = $this->url->link('extension/module', 'token='.$this->session->data['token'], 'SSL');
+        }
+
         $this->{'model_extension_'.$this->codename.'_cache'}->checkCache();
 
         $data['header'] = $this->load->controller('common/header');

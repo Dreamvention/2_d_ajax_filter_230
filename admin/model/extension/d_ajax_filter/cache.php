@@ -56,10 +56,30 @@ class ModelExtensionDAjaxFilterCache extends Model {
         if(!$this->checkColumn(DB_PREFIX."product","af_values")) {
             $this->db->query("ALTER TABLE ".DB_PREFIX."product ADD COLUMN af_values TEXT");
             $this->db->query("ALTER TABLE ".DB_PREFIX."product ADD FULLTEXT INDEX `af_values` (`af_values`)");
-            return true;
         }
-        else {
-            return false;
+
+        if(!$this->checkColumn(DB_PREFIX."product","af_tags")) {
+            $this->db->query("ALTER TABLE ".DB_PREFIX."product ADD COLUMN af_tags TEXT");
+            $this->db->query("ALTER TABLE ".DB_PREFIX."product ADD FULLTEXT INDEX `af_tags` (`af_tags`)");
+        }
+    }
+
+    public function disableCache(){
+        $modules = $this->getModulesForCache();
+
+        foreach ($modules as $type) {
+            $this->load->controller('extension/'.$this->codename.'_module/uninstall');
+        }
+
+        $this->db->query("DROP TABLE IF EXISTS ". DB_PREFIX . "af_values");
+        $this->db->query("DROP TABLE IF EXISTS ". DB_PREFIX . "af_values");
+
+        if($this->checkColumn(DB_PREFIX."product","af_values")) {
+            $this->db->query("ALTER TABLE ".DB_PREFIX."product DROP COLUMN af_values");
+        }
+
+        if($this->checkColumn(DB_PREFIX."product","af_tags")) {
+            $this->db->query("ALTER TABLE ".DB_PREFIX."product DROP COLUMN af_tags");
         }
     }
 
