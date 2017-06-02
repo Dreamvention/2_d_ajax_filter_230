@@ -92,6 +92,8 @@ class ControllerExtensionDAjaxFilterCache extends Controller
 
         $data['create_complete'] =  str_replace('&amp;', '&', $this->url->link('extension/module/'.$this->codename, 'token='.$this->session->data['token'], 'SSL'));
 
+        $this->{'model_extension_'.$this->codename.'_cache'}->checkCache();
+
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');
