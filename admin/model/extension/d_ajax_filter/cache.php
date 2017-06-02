@@ -41,7 +41,7 @@ class ModelExtensionDAjaxFilterCache extends Model {
         $modules = $this->getModulesForCache();
 
         foreach ($modules as $type) {
-            $this->load->controller('extension/'.$this->codename.'_module/install');
+            $this->load->controller('extension/'.$this->codename.'_module/'.$type.'/install');
         }
 
         $this->db->query("CREATE TABLE IF NOT EXISTS " . DB_PREFIX . "af_values (
@@ -68,7 +68,7 @@ class ModelExtensionDAjaxFilterCache extends Model {
         $modules = $this->getModulesForCache();
 
         foreach ($modules as $type) {
-            $this->load->controller('extension/'.$this->codename.'_module/uninstall');
+            $this->load->controller('extension/'.$this->codename.'_module/'.$type.'/uninstall');
         }
 
         $this->db->query("DROP TABLE IF EXISTS ". DB_PREFIX . "af_values");

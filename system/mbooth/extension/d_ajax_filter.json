@@ -67,6 +67,7 @@
         "admin/model/extension/d_ajax_filter_module/filter.php",
 
         "admin/view/template/extension/d_ajax_filter/layout_partial/filter.tpl",
+        "admin/view/template/extension/d_ajax_filter/partials/tabs.tpl",
 
         "admin/controller/extension/d_ajax_filter/cache.php",
         "admin/controller/extension/d_ajax_filter/filter.php",
