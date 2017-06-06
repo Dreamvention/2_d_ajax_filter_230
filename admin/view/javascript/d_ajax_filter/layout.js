@@ -79,6 +79,7 @@ var d_ajax_filter = {
     //Сохранение модуля
     save:function(){
         var that = this;
+        window.onbeforeunload = null;
         $.ajax({
             url:that.setting.form.attr('action'),
             type:'post',
