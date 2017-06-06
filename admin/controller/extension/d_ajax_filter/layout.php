@@ -277,6 +277,7 @@ class ControllerExtensionDAjaxFilterLayout extends Controller
         $data['text_install_twig_support'] = $this->language->get('text_install_twig_support');
         $data['text_install_event_support'] = $this->language->get('text_install_event_support');
         $data['text_default'] = $this->language->get('text_default');
+        $data['text_not_positioned'] = $this->language->get('text_not_positioned');
 
         $data['column_name'] = $this->language->get('column_name');
         $data['column_type'] = $this->language->get('column_type');

@@ -65,6 +65,8 @@
                                                             <?php foreach ($module['layouts'] as $layout) { ?>
                                                             <li><?php echo $layout['name']; ?></li>
                                                             <?php } ?>
+                                                            <?php } else { ?>
+                                                                <li><?php echo $text_not_positioned; ?></li>
                                                             <?php } ?>
                                                         </ul>
                                                     </div>
