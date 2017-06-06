@@ -49,15 +49,11 @@
                     <div class="col-sm-10">
                         <div class="tab-content">
                             <div id="d_list_filter" class="tab-pane active">
-                                <div class="bs-callout bs-callout-info">
-                                    <h4><?php echo $text_important; ?></h4>
-                                    <?php echo $text_warning_default_setting; ?>
-                                </div>
                                 <div class="h2 header-title"><?php echo $text_filter_setting; ?></div>
+                                <div class="bs-callout bs-callout-info">
+                                    <?php echo $text_filter_default_general; ?>
+                                </div>
                                 <div class="container-fluid">
-                                    <div class="bs-callout bs-callout-info">
-                                        <?php echo $text_filter_default_general; ?>
-                                    </div>
                                     <div class="btn-group" data-toggle="buttons">
                                         <label class="btn btn-success btn-sm <?php echo ($setting['default']['status'] == '1')?'active':''; ?>">
                                             <input type="radio" name="<?php echo $codename; ?>_filters[default][status]" value="1"<?php echo ($setting['default']['status'] == 1)?'checked="checked"':''; ?> />
@@ -113,14 +109,11 @@
                                     </div>
                                 </div>
                                 <div class="h2 header-title"><?php echo $text_individual_filter_setting; ?></div>
-                                <div class="container-fluid">
                                     <div class="bs-callout bs-callout-info">
                                         <?php echo $text_warning_filter_individual; ?>
                                     </div>
-                                </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        
                                         <div class="input-group">
                                             <input type="text" class="form-control" name="select_filter_name"/>
                                             <input type="hidden" name="select_filter_group_id"/>
@@ -128,9 +121,6 @@
                                                 <a id="add-filter" class="btn btn-default"><i class="fa fa-plus"></i></a>
                                             </span>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p><?php echo $text_warning_select_filter; ?></p>
                                     </div>
                                 </div>
                                 <table class="table table-filter-select">

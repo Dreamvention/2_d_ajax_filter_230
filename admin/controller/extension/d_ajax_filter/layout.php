@@ -236,6 +236,7 @@ class ControllerExtensionDAjaxFilterLayout extends Controller
 
         if(!empty($this->request->get['module_id'])){
             $module_id = $this->request->get['module_id'];
+            $data['module_id'] = $module_id;
         }
 
         $this->document->setTitle($this->language->get('heading_title_main'));

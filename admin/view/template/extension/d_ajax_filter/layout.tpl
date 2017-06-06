@@ -786,15 +786,23 @@
 
         });
 
-        var d_shopunity_widget_update = jQuery.extend(true, {}, d_shopunity_widget);
-        d_shopunity_widget_update.init({
-            class: '.d_shopunity_widget_update',
-            token: '<?php echo $token; ?>',
-            action: 'loadUpdate',
-            extension_id: '5'
-        })
+        <?php  if(!isset($module_id)) { ?>
+            $(document).on('change', '[name^=module_setting]', function(){
+                window.onbeforeunload = function(e) {
+                    return true;
+                };
+            });
+            
+            <?php } ?>
 
-    });
+            var d_shopunity_widget_update = jQuery.extend(true, {}, d_shopunity_widget);
+            d_shopunity_widget_update.init({
+                class: '.d_shopunity_widget_update',
+                token: '<?php echo $token; ?>',
+                action: 'loadUpdate',
+                extension_id: '5'
+            })
+        });
 
-</script>
-<?php echo $footer; ?>
+    </script>
+    <?php echo $footer; ?>

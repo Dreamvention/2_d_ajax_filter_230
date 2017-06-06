@@ -1,18 +1,17 @@
 <div id="filter" class="tab-pane">
     <div class="h2 header-title"><?php echo $text_default_filter_settings; ?></div>
-    <div class="container-fluid">
-        <div class="bs-callout bs-callout-info">
+    <div class="bs-callout bs-callout-info">
         <?php echo $text_default_setting; ?>
-        </div>
+    </div>
+    <div class="container-fluid">
         <a href="<?php echo $filter_href; ?>" class="btn btn-success"><?php echo $button_edit_default; ?></a>
     </div>
     <div class="h2 header-title"><?php echo $text_filter_setting; ?></div>
+    <div class="bs-callout bs-callout-info">
+        <?php echo $text_filter_default; ?>
+    </div>
     <div class="container-fluid">
 
-        <div class="bs-callout bs-callout-info">
-            <?php echo $text_filter_default; ?>
-        </div>
-        
         <div class="btn-group" data-toggle="buttons">
             <label class="btn btn-success btn-sm <?php echo ($filter_default['status'] == 'default')?'active':''; ?>">
                 <input type="radio" name="module_setting[filter_default][status]" value="default" <?php echo ($filter_default['status'] == 'default')?'checked="checked"':''; ?> />
@@ -74,12 +73,12 @@
         </div>
     </div>
     <div class="h2 header-title"><?php echo $text_individual_setting; ?></div>
+    <div class="bs-callout bs-callout-info">
+        <?php echo $text_warning_filter_individual; ?>
+    </div>
     <div class="container-fluid">
-        <div class="bs-callout bs-callout-info">
-            <?php echo $text_warning_filter_individual; ?>
-        </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="input-group">
                     <input type="text" class="form-control" name="select_filter_name"/>
                     <input type="hidden" name="select_filter_group_id"/>
@@ -87,9 +86,6 @@
                         <a id="add-filter" class="btn btn-default"><i class="fa fa-plus"></i></a>
                     </span>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <?php echo $text_warning_select_filter; ?>
             </div>
         </div>
     </div>
