@@ -8,11 +8,11 @@ $_['text_title']                        = 'Filter';
 $_['text_tab_setting']                  = 'Settings';
 $_['text_tab_layout']                   = 'Layout';
 $_['text_tab_options']                  = 'Options';
-$_['text_tab_filter']                  = 'Filters';
+$_['text_tab_filter']                   = 'Filters';
 $_['text_tab_attributes']               = 'Attributes';
 $_['text_tab_configuration']            = 'Configuration';
 $_['text_tab_design']                   = 'Design';
-$_['text_filter_default']               = '<b>Default Settings for All Filters</b></br><p>Here you can set general settings for product filters. To set individual settings for the filter, use the form below.</p>';
+$_['text_filter_default']               = 'Here you can set general settings for product filters in current module.';
 $_['text_individual_filter_setting']    = 'Individual Filters Settings';
 $_['text_module']                       = 'Modules';
 $_['text_important']                    = 'Important!';
@@ -23,6 +23,13 @@ $_['text_warning_image_filter']         = 'Here you can specify an image for the
 $_['text_list']                         = 'Settings';
 $_['text_image']                        = 'Image';
 $_['text_file_manager']                 = 'File Manager';
+$_['text_default_filter_settings']      = 'Default Filter settings';
+$_['text_filter_setting']               = "This Module Filter settings";
+$_['text_individual_setting']           = 'Individual Filter settings';
+$_['text_on']                           = 'On';
+$_['text_off']                          = 'Off';
+$_['text_default_setting']              = 'To change the filter settings for all modules, click the button below.';
+$_['text_filter_default_general']       = 'Here you can set general settings for product filters in all modules.';
 
 $_['text_base_type_radio']              = 'Radio';
 $_['text_base_type_select']             = 'Select';
@@ -38,9 +45,14 @@ $_['text_sort_order_type_string_desc']  = 'String DESC';
 $_['text_sort_order_type_numeric_asc']  = 'Numeric ASC';
 $_['text_sort_order_type_numeric_desc'] = 'Numeric DESC';
 
+$_['button_edit_default']               = 'Edit Default Settings';
+
 $_['entry_filter']                      = 'Filter';
 $_['entry_additional_image']            = 'Image';
 $_['entry_filter_value']                = 'Filter Value';
+$_['entry_type']                        = 'Type';
+$_['entry_collapse']                    = 'Collapse';
+$_['entry_sort_order_values']           = 'Sort Order Values';
 
 $_['column_name']                       = 'Attribute Name';
 $_['column_type']                       = 'Display a list of items';

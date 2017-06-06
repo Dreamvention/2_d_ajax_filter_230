@@ -43,7 +43,7 @@
                         </div>
                         <div class="col-sm-10">
                             <div class="tab-content">
-                                <div id="home" class="tab-pane active">
+                                <div id="home" class="tab-pane">
                                     <div class="row">
                                         <?php if(!empty($modules)) { ?>
                                         <?php foreach ($modules as $module) { ?>
@@ -93,20 +93,6 @@
                                                     </div>
                                                 </a>
                                                 <div class="tile-footer"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label"><?php echo $entry_support; ?></label>
-                                                <div class="col-sm-2">
-                                                    <a href="mailto:<?php echo $support_email; ?>?Subject=Request%20Support:<?php echo str_replace(' ', '%20', $heading_title); ?>&body=Shop:%20<?php echo str_replace(' ', '%20', HTTP_SERVER); ?>" class="btn btn-primary btn-block"><i class="fa fa-support"></i> <?php echo $button_support_email; ?></a>
-
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <label class="form-control-static"><?php echo $support_email; ?></label>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>

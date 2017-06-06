@@ -383,6 +383,8 @@ class ControllerExtensionModuleDAjaxFilter extends Controller
             $json['success'] = 'success';
             $json['get'] = $this->request->get;
             $json['url'] = $this->{'model_extension_module_'.$this->codename}->getUrl($route);
+
+            $this->config->set('config_product_count', false);
             
             $this->{'model_extension_module_'.$this->codename}->prepareTable($data, true);
             
