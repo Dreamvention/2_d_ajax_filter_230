@@ -155,7 +155,11 @@ class ControllerExtensionDAjaxFilterLayout extends Controller
             $this->model_extension_module->deleteModule($this->request->post['module_id']);
 
             $this->session->data['success'] = $this->language->get('text_success');
-            $json['redirect'] = str_replace('&amp;','&',$this->url->link($this->route, 'token='.$this->session->data['token'], 'SSL'));
+            $url = '';
+            if(!empty($this->request->get['module_id'])){
+                $url .= '&module_id='.$this->request->get['module_id'];
+            }
+            $json['redirect'] = str_replace('&amp;','&',$this->url->link($this->route, 'token='.$this->session->data['token'].$url, 'SSL'));
             $json['success'] = 'success';
         }
         else{
@@ -505,7 +509,7 @@ class ControllerExtensionDAjaxFilterLayout extends Controller
                 $data['design'] = $config_setting['theme'];
             }
             else{
-                $data['design'] = $data['setting'];
+                $data['design'] = $data['setting']['design'];
             }
         }
         else{
