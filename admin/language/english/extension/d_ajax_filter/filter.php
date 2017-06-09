@@ -27,6 +27,7 @@ $_['text_general_filter_setting']       = "Global filter settings";
 $_['text_individual_setting']           = 'Individual filter settings';
 $_['text_on']                           = 'On';
 $_['text_off']                          = 'Off';
+$_['text_global']                       = 'Global';
 $_['text_default_setting']              = 'To change the filter settings for all modules, click the button below.';
 $_['text_filter_default_general']       = 'Edit global filter settings for all filters. If you wish to modify settings of only one filter, then you should go to Menu / Layout / Filters. ';
 
