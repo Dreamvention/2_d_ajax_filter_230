@@ -1,27 +1,25 @@
 <div id="filter" class="tab-pane">
     <div class="h2 header-title"><?php echo $text_default_filter_settings; ?></div>
-    <div class="bs-callout bs-callout-info">
+    <p>
         <?php echo $text_default_setting; ?>
-    </div>
-    <div class="container-fluid">
-        <a href="<?php echo $filter_href; ?>" class="btn btn-success"><?php echo $button_edit_default; ?></a>
-    </div>
+    </p>
+    <a href="<?php echo $filter_href; ?>" class="btn btn-success"><?php echo $button_edit_default; ?></a>
+    
     <div class="h2 header-title"><?php echo $text_filter_setting; ?></div>
-    <div class="bs-callout bs-callout-info">
-        <?php echo $text_filter_default; ?>
-    </div>
-    <div class="container-fluid">
-
+    <p>
+    <?php echo $text_filter_default; ?>
+    </p>
+    <div>
         <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-success btn-sm <?php echo ($filter_default['status'] == 'default')?'active':''; ?>">
+            <label class="btn btn-success <?php echo ($filter_default['status'] == 'default')?'active':''; ?>">
                 <input type="radio" name="module_setting[filter_default][status]" value="default" <?php echo ($filter_default['status'] == 'default')?'checked="checked"':''; ?> />
                 <?php echo $text_default; ?>
             </label>
-            <label class="btn btn-success btn-sm <?php echo ($filter_default['status'] == '1')?'active':''; ?>">
+            <label class="btn btn-success <?php echo ($filter_default['status'] == '1')?'active':''; ?>">
                 <input type="radio" name="module_setting[filter_default][status]" value="1"<?php echo ($filter_default['status'] == '1')?'checked="checked"':''; ?> />
                 <?php echo $text_yes; ?>
             </label>
-            <label class="btn btn-success btn-sm <?php echo ($filter_default['status'] == '0')?'active':''; ?>">
+            <label class="btn btn-success <?php echo ($filter_default['status'] == '0')?'active':''; ?>">
                 <input type="radio" name="module_setting[filter_default][status]" value="0" <?php echo ($filter_default['status'] == '0')?'checked="checked"':''; ?> />
                 <?php echo $text_no; ?>
             </label>
@@ -73,10 +71,10 @@
         </div>
     </div>
     <div class="h2 header-title"><?php echo $text_individual_setting; ?></div>
-    <div class="bs-callout bs-callout-info">
+    <p>
         <?php echo $text_warning_filter_individual; ?>
-    </div>
-    <div class="container-fluid">
+    </p>
+    <div>
         <div class="row">
             <div class="col-md-4">
                 <div class="input-group">
@@ -89,8 +87,9 @@
             </div>
         </div>
     </div>
-    
-    <table class="table table-filter-select">
+    <br/>
+    <br/>
+    <table class="table table-filter-select hide">
         <thead>
             <tr>
                 <td></td>

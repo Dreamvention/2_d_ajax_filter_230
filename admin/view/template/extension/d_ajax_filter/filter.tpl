@@ -50,18 +50,18 @@
                         <div class="tab-content">
                             <div id="d_list_filter" class="tab-pane active">
                                 <div class="h2 header-title"><?php echo $text_general_filter_setting; ?></div>
-                                <div class="bs-callout bs-callout-info">
+                                <p>
                                     <?php echo $text_filter_default_general; ?>
-                                </div>
-                                <div class="container-fluid">
+                                </p>
+                                <div>
                                     <div class="btn-group" data-toggle="buttons">
-                                        <label class="btn btn-success btn-sm <?php echo ($setting['default']['status'] == '1')?'active':''; ?>">
+                                        <label class="btn btn-success <?php echo ($setting['default']['status'] == '1')?'active':''; ?>">
                                             <input type="radio" name="<?php echo $codename; ?>_filters[default][status]" value="1"<?php echo ($setting['default']['status'] == 1)?'checked="checked"':''; ?> />
-                                            <?php echo $text_yes; ?>
+                                            <?php echo $text_on; ?>
                                         </label>
-                                        <label class="btn btn-success btn-sm <?php echo ($setting['default']['status'] == '0')?'active':''; ?>">
+                                        <label class="btn btn-success <?php echo ($setting['default']['status'] == '0')?'active':''; ?>">
                                             <input type="radio" name="<?php echo $codename; ?>_filters[default][status]" value="0" <?php echo ($setting['default']['status'] == 0)?'checked="checked"':''; ?> />
-                                            <?php echo $text_no; ?>
+                                            <?php echo $text_off; ?>
                                         </label>
                                     </div>
                                 </div>
@@ -109,9 +109,9 @@
                                     </div>
                                 </div>
                                 <div class="h2 header-title"><?php echo $text_individual_filter_setting; ?></div>
-                                    <div class="bs-callout bs-callout-info">
-                                        <?php echo $text_warning_filter_individual; ?>
-                                    </div>
+                                <p>
+                                    <?php echo $text_warning_filter_individual; ?>
+                                </p>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="input-group">
@@ -123,7 +123,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <table class="table table-filter-select">
+                                <br/>
+                                <br/>
+                                <table class="table table-filter-select hide">
                                     <thead>
                                         <tr>
                                             <td></td>
@@ -187,7 +189,6 @@
                             </div>
                             <div id="d_filter_image" class="tab-pane">
                                 <div class="bs-callout bs-callout-info">
-                                    <h4><?php echo $text_important; ?></h4>
                                     <?php echo $text_warning_image_filter; ?>
                                 </div>
                                 <div class="form-group">
@@ -435,3 +436,4 @@ function addSingleImage(imageName, field, thumb) {
     });
 }
 </script>
+<?php echo $footer; ?>
