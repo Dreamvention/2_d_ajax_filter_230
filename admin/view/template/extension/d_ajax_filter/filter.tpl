@@ -385,14 +385,16 @@
         $(document).on('click', '#add-filter', function(){
             var filter_group_id = $('input[name="select_filter_group_id"]').val();
             var filter_name = $('input[name="select_filter_name"]').val();
-            $('.table-filter-select').removeClass('hide');
-            d_ajax_filter.addFilter(filter_group_id, filter_name);
-            d_ajax_filter.updateSortOrder('table.table-filter-select > tbody','tr');
-            $(".switcher").bootstrapSwitch({
-                'onColor': 'success',
-                'onText': '<?php echo $text_yes; ?>',
-                'offText': '<?php echo $text_no; ?>',
-            });
+            if(filter_group_id !== ''){
+                $('.table-filter-select').removeClass('hide');
+                d_ajax_filter.addFilter(filter_group_id, filter_name);
+                d_ajax_filter.updateSortOrder('table.table-filter-select > tbody','tr');
+                $(".switcher").bootstrapSwitch({
+                    'onColor': 'success',
+                    'onText': '<?php echo $text_yes; ?>',
+                    'offText': '<?php echo $text_no; ?>',
+                });
+            }
         });
         $(document).on('change','select[name=filter_languages]',function(){
 
