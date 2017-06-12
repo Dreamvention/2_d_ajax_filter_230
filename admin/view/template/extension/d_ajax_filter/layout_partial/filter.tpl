@@ -93,7 +93,7 @@
         </div>
         <br/>
         <br/>
-        <table class="table table-filter-select hide">
+        <table class="table table-filter-select <?php echo empty($filters)?'hide':''; ?>">
             <thead>
                 <tr>
                     <td></td>
@@ -174,6 +174,7 @@
             $(document).on('click', '#add-filter', function(){
                 var filter_group_id = $('input[name="select_filter_group_id"]').val();
                 var filter_name = $('input[name="select_filter_name"]').val();
+                $('.table-filter-select').removeClass('hide');
                 d_ajax_filter.addElement(filter_group_id, filter_name, 'filters', '.table-filter-select > tbody', 'tr', <?php echo json_encode($default); ?>, <?php echo json_encode($base_types); ?>);
                 d_ajax_filter.updateSortOrder('table.table-filter-select > tbody','tr');
                 $(".switcher").bootstrapSwitch({
